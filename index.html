@@ -3,9 +3,13 @@
 <head>
   <title>Facinating Pics</title>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-  <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/foundation.css">
   <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
-  <script type="text/javascript" src="js/yetii-min.js"></script>
+  <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <script src="js/scripts.js"></script>
+  <script src="js/foundation.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +21,7 @@
 
 <div class="container content">
   <div id="tab-container-1">
-    <div class="span-13">
+    <div class="small-6 columns">
       <div class="tab" id="tab1"> <a href="javascript:tabber1.next()" title="Click to view next image"><img src="img/fullsize/ancient.jpg" /></a>
         <p class="info"> <strong>A Kingdom of Isolation</strong> "Mum! ...Ancient kingdom..." </p>
       </div>
@@ -50,7 +54,7 @@
         <p class="info"> <strong>A wisp?</strong> "You know, some say, that will-o'-the wisps lead you to your fate." </p>
       </div>
     </div>
-    <div class="span-5">
+    <div class="small-3 columns">
       <ul id="tab-container-1-nav">
         <li><a href="#tab1"><img src="img/thumbs/ancient.jpg" /></a></li>
         <li><a href="#tab2"><img src="img/thumbs/cabin.jpg" /></a></li>
@@ -62,9 +66,8 @@
         <li><a href="#tab8"><img src="img/thumbs/town.jpg" /></a></li>
         <li><a href="#tab9"><img src="img/thumbs/waterfall.jpg" /></a></li>
         <li><a href="#tab10"><img src="img/thumbs/yangtze.jpg" /></a></li>
-      </ul>
     </div>
-    <div class="span-5 last">
+    <div class="small-3 columns">
       <h2>Facinating Pics</h2>
       <p>This could be where the advertisements go, Colin. Just random information about a business that paid for this space. <a href="#">Click Here.</a></p>
     </div>
@@ -76,9 +79,11 @@
 </footer>
 
 <script type="text/javascript">
-var tabber1 = new Yetii({
-id: 'tab-container-1'
-});
+	$(document).foundation();
+
+	var tabber1 = new tabContainer({
+		id: 'tab-container-1'
+	});
 </script>
 
 </body>
